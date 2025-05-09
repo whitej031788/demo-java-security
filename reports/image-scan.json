@@ -9,7 +9,7 @@
             "startLine": 5,
             "endLine": 5,
             "startColumn": 1,
-            "endColumn": 20
+            "endColumn": 12
           }
         },
         "secondaryLocations": []
@@ -23,7 +23,7 @@
             "startLine": 8,
             "endLine": 8,
             "startColumn": 1,
-            "endColumn": 10
+            "endColumn": 15
           }
         },
         "secondaryLocations": []
@@ -37,7 +37,7 @@
             "startLine": 12,
             "endLine": 12,
             "startColumn": 5,
-            "endColumn": 50
+            "endColumn": 9
           }
         },
         "secondaryLocations": []
@@ -74,13 +74,7 @@
         "ruleId": "DGSA-0003",
         "primaryLocation": {
           "message": "Sensitive environment variable 'DATABASE_PASSWORD' detected in ./Dockerfile.",
-          "filePath": "./Dockerfile",
-          "textRange": {
-            "startLine": 15,
-            "endLine": 15,
-            "startColumn": 1,
-            "endColumn": 35
-          }
+          "filePath": "./Dockerfile"
         },
         "secondaryLocations": []
       },
@@ -107,7 +101,7 @@
             "startLine": 10,
             "endLine": 10,
             "startColumn": 1,
-            "endColumn": 18
+            "endColumn": 6
           }
         },
         "secondaryLocations": []
@@ -136,8 +130,8 @@
           "textRange": {
             "startLine": 25,
             "endLine": 25,
-            "startColumn": 5,
-            "endColumn": 60
+            "startColumn": 1,
+            "endColumn": 10
           }
         },
         "secondaryLocations": []
@@ -167,7 +161,7 @@
             "startLine": 18,
             "endLine": 18,
             "startColumn": 1,
-            "endColumn": 25
+            "endColumn": 5
           }
         },
         "secondaryLocations": []
