@@ -126,13 +126,7 @@
         "ruleId": "CVE-2023-7890",
         "primaryLocation": {
           "message": "Security flaw in 'nginx' configuration. Potential information disclosure.",
-          "filePath": "./Dockerfile",
-          "textRange": {
-            "startLine": 25,
-            "endLine": 25,
-            "startColumn": 1,
-            "endColumn": 10
-          }
+          "filePath": "./Dockerfile"
         },
         "secondaryLocations": []
       },
@@ -169,11 +163,11 @@
       {
         "ruleId": "CVE-2023-6789",
         "primaryLocation": {
-          "message": "Dependency 'django' has a known security vulnerability.",
+          "message": "Dependency 'ubuntu:22.04' has a known security vulnerability.",
           "filePath": "./Dockerfile",
           "textRange": {
-            "startLine": 1,
-            "endLine": 1,
+            "startLine": 2,
+            "endLine": 2,
             "startColumn": 1,
             "endColumn": 7
           }
