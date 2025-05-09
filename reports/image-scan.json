@@ -197,7 +197,7 @@
         "impacts": [
           {
             "softwareQuality": "SECURITY",
-            "severity": "CRITICAL"
+            "severity": "HIGH"
           }
         ]
       },
@@ -210,7 +210,7 @@
         "impacts": [
           {
             "softwareQuality": "SECURITY",
-            "severity": "MAJOR"
+            "severity": "HIGH"
           }
         ]
       },
@@ -236,7 +236,7 @@
         "impacts": [
           {
             "softwareQuality": "SECURITY",
-            "severity": "MINOR"
+            "severity": "LOW"
           }
         ]
       },
@@ -249,7 +249,7 @@
         "impacts": [
           {
             "softwareQuality": "SECURITY",
-            "severity": "CRITICAL"
+            "severity": "MEDIUM"
           }
         ]
       },
@@ -262,7 +262,7 @@
         "impacts": [
           {
             "softwareQuality": "SECURITY",
-            "severity": "MAJOR"
+            "severity": "BLOCKER"
           }
         ]
       },
@@ -288,7 +288,7 @@
         "impacts": [
           {
             "softwareQuality": "SECURITY",
-            "severity": "MINOR"
+            "severity": "INFO"
           }
         ]
       },
@@ -301,7 +301,7 @@
         "impacts": [
           {
             "softwareQuality": "SECURITY",
-            "severity": "CRITICAL"
+            "severity": "BLOCKER"
           }
         ]
       },
@@ -314,7 +314,7 @@
         "impacts": [
           {
             "softwareQuality": "SECURITY",
-            "severity": "MAJOR"
+            "severity": "MEDIUM"
           }
         ]
       },
@@ -340,7 +340,7 @@
         "impacts": [
           {
             "softwareQuality": "SECURITY",
-            "severity": "MINOR"
+            "severity": "INFO"
           }
         ]
       },
@@ -353,7 +353,7 @@
         "impacts": [
           {
             "softwareQuality": "SECURITY",
-            "severity": "CRITICAL"
+            "severity": "HIGH"
           }
         ]
       },
@@ -366,7 +366,7 @@
         "impacts": [
           {
             "softwareQuality": "SECURITY",
-            "severity": "MAJOR"
+            "severity": "LOW"
           }
         ]
       },
