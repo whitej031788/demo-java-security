@@ -88,7 +88,7 @@
         "ruleId": "CVE-2023-4567",
         "primaryLocation": {
           "message": "Vulnerability in 'python' package. Upgrade recommended.",
-          "filePath": "requirements.txt",
+          "filePath": "Dockerfile",
           "textRange": {
             "startLine": 2,
             "endLine": 2,
@@ -116,7 +116,7 @@
         "ruleId": "CVE-2022-9012",
         "primaryLocation": {
           "message": "Vulnerable 'bash' version detected in the image.",
-          "filePath": "base_image_info.txt"
+          "filePath": "Dockerfile"
         },
         "secondaryLocations": []
       },
@@ -124,7 +124,7 @@
         "ruleId": "DGSA-0005",
         "primaryLocation": {
           "message": "Default credentials found for user 'admin'. Change immediately.",
-          "filePath": "configuration/users.ini"
+          "filePath": "Dockerfile"
         },
         "secondaryLocations": []
       },
@@ -132,7 +132,7 @@
         "ruleId": "CVE-2023-7890",
         "primaryLocation": {
           "message": "Security flaw in 'nginx' configuration. Potential information disclosure.",
-          "filePath": "etc/nginx/nginx.conf",
+          "filePath": "Dockerfile",
           "textRange": {
             "startLine": 25,
             "endLine": 25,
@@ -154,7 +154,7 @@
         "ruleId": "CVE-2024-3456",
         "primaryLocation": {
           "message": "Vulnerable version of 'openssh-server' installed.",
-          "filePath": "installed_packages.txt"
+          "filePath": "Dockerfile"
         },
         "secondaryLocations": []
       },
@@ -176,7 +176,7 @@
         "ruleId": "CVE-2023-6789",
         "primaryLocation": {
           "message": "Dependency 'django' has a known security vulnerability.",
-          "filePath": "requirements.txt",
+          "filePath": "Dockerfile",
           "textRange": {
             "startLine": 1,
             "endLine": 1,
