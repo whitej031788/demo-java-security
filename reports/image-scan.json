@@ -1,0 +1,412 @@
+{
+    "issues": [
+      {
+        "ruleId": "CVE-2023-1234",
+        "primaryLocation": {
+          "message": "Vulnerable package 'libssl1.1' found in base image.",
+          "filePath": "Dockerfile",
+          "textRange": {
+            "startLine": 5,
+            "endLine": 5,
+            "startColumn": 1,
+            "endColumn": 20
+          }
+        },
+        "secondaryLocations": [
+          {
+            "message": "Package 'libssl1.1' version 1.1.1k is known to be vulnerable.",
+            "filePath": "manifest.json"
+          }
+        ]
+      },
+      {
+        "ruleId": "DGSA-0001",
+        "primaryLocation": {
+          "message": "Exposed port '22' detected. Consider restricting access.",
+          "filePath": "Dockerfile",
+          "textRange": {
+            "startLine": 8,
+            "endLine": 8,
+            "startColumn": 1,
+            "endColumn": 10
+          }
+        },
+        "secondaryLocations": []
+      },
+      {
+        "ruleId": "CVE-2022-5678",
+        "primaryLocation": {
+          "message": "Potential command injection vulnerability in 'RUN' instruction.",
+          "filePath": "Dockerfile",
+          "textRange": {
+            "startLine": 12,
+            "endLine": 12,
+            "startColumn": 5,
+            "endColumn": 50
+          }
+        },
+        "secondaryLocations": [
+          {
+            "message": "Input to command not properly sanitized.",
+            "filePath": "scripts/setup.sh"
+          }
+        ]
+      },
+      {
+        "ruleId": "DGSA-0002",
+        "primaryLocation": {
+          "message": "User 'root' is used. Consider creating a non-root user.",
+          "filePath": "Dockerfile",
+          "textRange": {
+            "startLine": 2,
+            "endLine": 2,
+            "startColumn": 1,
+            "endColumn": 12
+          }
+        },
+        "secondaryLocations": []
+      },
+      {
+        "ruleId": "CVE-2024-9876",
+        "primaryLocation": {
+          "message": "Outdated 'curl' version found with known security flaws.",
+          "filePath": "Dockerfile",
+          "textRange": {
+            "startLine": 7,
+            "endLine": 7,
+            "startColumn": 1,
+            "endColumn": 15
+          }
+        },
+        "secondaryLocations": [
+          {
+            "message": "'curl' version 7.80.0 is vulnerable to multiple issues.",
+            "filePath": "installed_packages.txt"
+          }
+        ]
+      },
+      {
+        "ruleId": "DGSA-0003",
+        "primaryLocation": {
+          "message": "Sensitive environment variable 'DATABASE_PASSWORD' detected in Dockerfile.",
+          "filePath": "Dockerfile",
+          "textRange": {
+            "startLine": 15,
+            "endLine": 15,
+            "startColumn": 1,
+            "endColumn": 35
+          }
+        },
+        "secondaryLocations": []
+      },
+      {
+        "ruleId": "CVE-2023-4567",
+        "primaryLocation": {
+          "message": "Vulnerability in 'python' package. Upgrade recommended.",
+          "filePath": "requirements.txt",
+          "textRange": {
+            "startLine": 2,
+            "endLine": 2,
+            "startColumn": 1,
+            "endColumn": 8
+          }
+        },
+        "secondaryLocations": [
+          {
+            "message": "'python' version 3.9.0 has known security issues.",
+            "filePath": "installed_packages.txt"
+          }
+        ]
+      },
+      {
+        "ruleId": "DGSA-0004",
+        "primaryLocation": {
+          "message": "Consider using 'COPY --chown' to avoid root-owned files.",
+          "filePath": "Dockerfile",
+          "textRange": {
+            "startLine": 10,
+            "endLine": 10,
+            "startColumn": 1,
+            "endColumn": 18
+          }
+        },
+        "secondaryLocations": []
+      },
+      {
+        "ruleId": "CVE-2022-9012",
+        "primaryLocation": {
+          "message": "Vulnerable 'bash' version detected in the image.",
+          "filePath": "base_image_info.txt"
+        },
+        "secondaryLocations": []
+      },
+      {
+        "ruleId": "DGSA-0005",
+        "primaryLocation": {
+          "message": "Default credentials found for user 'admin'. Change immediately.",
+          "filePath": "configuration/users.ini"
+        },
+        "secondaryLocations": []
+      },
+      {
+        "ruleId": "CVE-2023-7890",
+        "primaryLocation": {
+          "message": "Security flaw in 'nginx' configuration. Potential information disclosure.",
+          "filePath": "etc/nginx/nginx.conf",
+          "textRange": {
+            "startLine": 25,
+            "endLine": 25,
+            "startColumn": 5,
+            "endColumn": 60
+          }
+        },
+        "secondaryLocations": []
+      },
+      {
+        "ruleId": "DGSA-0006",
+        "primaryLocation": {
+          "message": "Consider using multi-stage builds to reduce image size.",
+          "filePath": "Dockerfile"
+        },
+        "secondaryLocations": []
+      },
+      {
+        "ruleId": "CVE-2024-3456",
+        "primaryLocation": {
+          "message": "Vulnerable version of 'openssh-server' installed.",
+          "filePath": "installed_packages.txt"
+        },
+        "secondaryLocations": []
+      },
+      {
+        "ruleId": "DGSA-0007",
+        "primaryLocation": {
+          "message": "Insecure permissions set on '/app/data' directory.",
+          "filePath": "Dockerfile",
+          "textRange": {
+            "startLine": 18,
+            "endLine": 18,
+            "startColumn": 1,
+            "endColumn": 25
+          }
+        },
+        "secondaryLocations": []
+      },
+      {
+        "ruleId": "CVE-2023-6789",
+        "primaryLocation": {
+          "message": "Dependency 'django' has a known security vulnerability.",
+          "filePath": "requirements.txt",
+          "textRange": {
+            "startLine": 1,
+            "endLine": 1,
+            "startColumn": 1,
+            "endColumn": 7
+          }
+        },
+        "secondaryLocations": [
+          {
+            "message": "'django' version 2.2.0 is affected by a cross-site scripting vulnerability.",
+            "filePath": "vulnerabilities.txt"
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "CVE-2023-1234",
+        "name": "Vulnerable libssl1.1 Package",
+        "description": "The 'libssl1.1' package has a known security vulnerability. Upgrade to a patched version.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "CRITICAL"
+          }
+        ]
+      },
+      {
+        "id": "DGSA-0001",
+        "name": "Exposed Port 22",
+        "description": "Port 22 (SSH) is exposed. This can increase the attack surface of the container. Consider restricting access or using alternative methods.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "MAJOR"
+          }
+        ]
+      },
+      {
+        "id": "CVE-2022-5678",
+        "name": "Potential Command Injection in RUN",
+        "description": "The 'RUN' instruction appears to have a potential command injection vulnerability due to unsanitized input.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "HIGH"
+          }
+        ]
+      },
+      {
+        "id": "DGSA-0002",
+        "name": "Running as Root User",
+        "description": "The container is currently configured to run as the 'root' user. Running as a non-root user is a security best practice.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "MINOR"
+          }
+        ]
+      },
+      {
+        "id": "CVE-2024-9876",
+        "name": "Outdated curl Version",
+        "description": "The installed version of 'curl' has known security vulnerabilities. Upgrade to the latest stable version.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "CRITICAL"
+          }
+        ]
+      },
+      {
+        "id": "DGSA-0003",
+        "name": "Sensitive Environment Variable in Dockerfile",
+        "description": "The environment variable 'DATABASE_PASSWORD' is defined in the Dockerfile. This is not a secure way to handle sensitive information.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "MAJOR"
+          }
+        ]
+      },
+      {
+        "id": "CVE-2023-4567",
+        "name": "Vulnerable python Package",
+        "description": "The 'python' package has a known security vulnerability. Upgrade to a secure version.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "HIGH"
+          }
+        ]
+      },
+      {
+        "id": "DGSA-0004",
+        "name": "Consider COPY --chown",
+        "description": "Using 'COPY --chown' can help avoid files being owned by the root user in the final image.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "MINOR"
+          }
+        ]
+      },
+      {
+        "id": "CVE-2022-9012",
+        "name": "Vulnerable bash Version",
+        "description": "The base image contains a version of 'bash' with known security vulnerabilities. Consider updating the base image or patching 'bash'.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "CRITICAL"
+          }
+        ]
+      },
+      {
+        "id": "DGSA-0005",
+        "name": "Default Credentials Found",
+        "description": "Default credentials were found for the 'admin' user. These should be changed immediately.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "MAJOR"
+          }
+        ]
+      },
+      {
+        "id": "CVE-2023-7890",
+        "name": "Nginx Configuration Vulnerability",
+        "description": "The 'nginx' configuration has a potential security flaw that could lead to information disclosure. Review the configuration.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "HIGH"
+          }
+        ]
+      },
+      {
+        "id": "DGSA-0006",
+        "name": "Consider Multi-Stage Builds",
+        "description": "Using multi-stage builds can help reduce the size of the final Docker image and improve security by minimizing included components.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "MINOR"
+          }
+        ]
+      },
+      {
+        "id": "CVE-2024-3456",
+        "name": "Vulnerable openssh-server Version",
+        "description": "The installed version of 'openssh-server' has known security vulnerabilities. Upgrade to a patched version.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "CRITICAL"
+          }
+        ]
+      },
+      {
+        "id": "DGSA-0007",
+        "name": "Insecure Permissions on /app/data",
+        "description": "The permissions set on the '/app/data' directory are too open, potentially leading to security risks. Restrict access as needed.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "MAJOR"
+          }
+        ]
+      },
+      {
+        "id": "CVE-2023-6789",
+        "name": "Vulnerable django Dependency",
+        "description": "The 'django' dependency has a known cross-site scripting vulnerability in the installed version. Upgrade to a patched version.",
+        "engineId": "docker-security-analyzer",
+        "cleanCodeAttribute": "FORMATTED",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "HIGH"
+          }
+        ]
+      }
+    ]
+  }

@@ -15,6 +15,7 @@
     <sonar.projectName>Java Web App</sonar.projectName>
     <sonar.encoding>UTF-8</sonar.encoding>
     <sonar.projectKey>whitej031788_demo-java-security_23c25f38-ad3f-457c-8faf-5dcadd7de422</sonar.projectKey>
+    <sonar.externalIssuesReportPaths>reports/image-scan.json</sonar.externalIssuesReportPaths>
   </properties>
   <dependencies>
     <dependency>
