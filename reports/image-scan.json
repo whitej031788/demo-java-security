@@ -12,12 +12,7 @@
             "endColumn": 20
           }
         },
-        "secondaryLocations": [
-          {
-            "message": "Package 'libssl1.1' version 1.1.1k is known to be vulnerable.",
-            "filePath": "manifest.json"
-          }
-        ]
+        "secondaryLocations": []
       },
       {
         "ruleId": "DGSA-0001",
@@ -45,12 +40,7 @@
             "endColumn": 50
           }
         },
-        "secondaryLocations": [
-          {
-            "message": "Input to command not properly sanitized.",
-            "filePath": "scripts/setup.sh"
-          }
-        ]
+        "secondaryLocations": []
       },
       {
         "ruleId": "DGSA-0002",
@@ -78,12 +68,7 @@
             "endColumn": 15
           }
         },
-        "secondaryLocations": [
-          {
-            "message": "'curl' version 7.80.0 is vulnerable to multiple issues.",
-            "filePath": "installed_packages.txt"
-          }
-        ]
+        "secondaryLocations": []
       },
       {
         "ruleId": "DGSA-0003",
@@ -111,12 +96,7 @@
             "endColumn": 8
           }
         },
-        "secondaryLocations": [
-          {
-            "message": "'python' version 3.9.0 has known security issues.",
-            "filePath": "installed_packages.txt"
-          }
-        ]
+        "secondaryLocations": []
       },
       {
         "ruleId": "DGSA-0004",
@@ -204,12 +184,7 @@
             "endColumn": 7
           }
         },
-        "secondaryLocations": [
-          {
-            "message": "'django' version 2.2.0 is affected by a cross-site scripting vulnerability.",
-            "filePath": "vulnerabilities.txt"
-          }
-        ]
+        "secondaryLocations": []
       }
     ],
     "rules": [
