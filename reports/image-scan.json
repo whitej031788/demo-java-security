@@ -4,7 +4,7 @@
         "ruleId": "CVE-2023-1234",
         "primaryLocation": {
           "message": "Vulnerable package 'libssl1.1' found in base image.",
-          "filePath": "Dockerfile",
+          "filePath": "./Dockerfile",
           "textRange": {
             "startLine": 5,
             "endLine": 5,
@@ -18,7 +18,7 @@
         "ruleId": "DGSA-0001",
         "primaryLocation": {
           "message": "Exposed port '22' detected. Consider restricting access.",
-          "filePath": "Dockerfile",
+          "filePath": "./Dockerfile",
           "textRange": {
             "startLine": 8,
             "endLine": 8,
@@ -32,7 +32,7 @@
         "ruleId": "CVE-2022-5678",
         "primaryLocation": {
           "message": "Potential command injection vulnerability in 'RUN' instruction.",
-          "filePath": "Dockerfile",
+          "filePath": "./Dockerfile",
           "textRange": {
             "startLine": 12,
             "endLine": 12,
@@ -46,7 +46,7 @@
         "ruleId": "DGSA-0002",
         "primaryLocation": {
           "message": "User 'root' is used. Consider creating a non-root user.",
-          "filePath": "Dockerfile",
+          "filePath": "./Dockerfile",
           "textRange": {
             "startLine": 2,
             "endLine": 2,
@@ -60,7 +60,7 @@
         "ruleId": "CVE-2024-9876",
         "primaryLocation": {
           "message": "Outdated 'curl' version found with known security flaws.",
-          "filePath": "Dockerfile",
+          "filePath": "./Dockerfile",
           "textRange": {
             "startLine": 7,
             "endLine": 7,
@@ -73,8 +73,8 @@
       {
         "ruleId": "DGSA-0003",
         "primaryLocation": {
-          "message": "Sensitive environment variable 'DATABASE_PASSWORD' detected in Dockerfile.",
-          "filePath": "Dockerfile",
+          "message": "Sensitive environment variable 'DATABASE_PASSWORD' detected in ./Dockerfile.",
+          "filePath": "./Dockerfile",
           "textRange": {
             "startLine": 15,
             "endLine": 15,
@@ -88,7 +88,7 @@
         "ruleId": "CVE-2023-4567",
         "primaryLocation": {
           "message": "Vulnerability in 'python' package. Upgrade recommended.",
-          "filePath": "Dockerfile",
+          "filePath": "./Dockerfile",
           "textRange": {
             "startLine": 2,
             "endLine": 2,
@@ -102,7 +102,7 @@
         "ruleId": "DGSA-0004",
         "primaryLocation": {
           "message": "Consider using 'COPY --chown' to avoid root-owned files.",
-          "filePath": "Dockerfile",
+          "filePath": "./Dockerfile",
           "textRange": {
             "startLine": 10,
             "endLine": 10,
@@ -116,7 +116,7 @@
         "ruleId": "CVE-2022-9012",
         "primaryLocation": {
           "message": "Vulnerable 'bash' version detected in the image.",
-          "filePath": "Dockerfile"
+          "filePath": "./Dockerfile"
         },
         "secondaryLocations": []
       },
@@ -124,7 +124,7 @@
         "ruleId": "DGSA-0005",
         "primaryLocation": {
           "message": "Default credentials found for user 'admin'. Change immediately.",
-          "filePath": "Dockerfile"
+          "filePath": "./Dockerfile"
         },
         "secondaryLocations": []
       },
@@ -132,7 +132,7 @@
         "ruleId": "CVE-2023-7890",
         "primaryLocation": {
           "message": "Security flaw in 'nginx' configuration. Potential information disclosure.",
-          "filePath": "Dockerfile",
+          "filePath": "./Dockerfile",
           "textRange": {
             "startLine": 25,
             "endLine": 25,
@@ -146,7 +146,7 @@
         "ruleId": "DGSA-0006",
         "primaryLocation": {
           "message": "Consider using multi-stage builds to reduce image size.",
-          "filePath": "Dockerfile"
+          "filePath": "./Dockerfile"
         },
         "secondaryLocations": []
       },
@@ -154,7 +154,7 @@
         "ruleId": "CVE-2024-3456",
         "primaryLocation": {
           "message": "Vulnerable version of 'openssh-server' installed.",
-          "filePath": "Dockerfile"
+          "filePath": "./Dockerfile"
         },
         "secondaryLocations": []
       },
@@ -162,7 +162,7 @@
         "ruleId": "DGSA-0007",
         "primaryLocation": {
           "message": "Insecure permissions set on '/app/data' directory.",
-          "filePath": "Dockerfile",
+          "filePath": "./Dockerfile",
           "textRange": {
             "startLine": 18,
             "endLine": 18,
@@ -176,7 +176,7 @@
         "ruleId": "CVE-2023-6789",
         "primaryLocation": {
           "message": "Dependency 'django' has a known security vulnerability.",
-          "filePath": "Dockerfile",
+          "filePath": "./Dockerfile",
           "textRange": {
             "startLine": 1,
             "endLine": 1,
@@ -255,8 +255,8 @@
       },
       {
         "id": "DGSA-0003",
-        "name": "Sensitive Environment Variable in Dockerfile",
-        "description": "The environment variable 'DATABASE_PASSWORD' is defined in the Dockerfile. This is not a secure way to handle sensitive information.",
+        "name": "Sensitive Environment Variable in ./Dockerfile",
+        "description": "The environment variable 'DATABASE_PASSWORD' is defined in the ./Dockerfile. This is not a secure way to handle sensitive information.",
         "engineId": "docker-security-analyzer",
         "cleanCodeAttribute": "FORMATTED",
         "impacts": [
