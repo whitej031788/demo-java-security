@@ -30,13 +30,30 @@ jobs:
       - name: Install sarif-spectral CLI
         run: npm install -g spectral-sarif
 
+              # Get npm global prefix
+      - name: Get npm global prefix
+        id: get-npm-prefix
+        run: echo "PREFIX=$(npm config get prefix)" >> $GITHUB_OUTPUT
+
+      # Add npm global bin to PATH
+      - name: Add npm global bin to PATH
+        run: echo "${{ steps.get-npm-prefix.outputs.PREFIX }}/bin" >> $GITHUB_PATH
+
+      # Verify Spectral installation location
+      - name: Verify Spectral Location
+        run: which spectral
+
+      # Verify sarif-spectral installation location
+      - name: Verify sarif-spectral Location
+        run: which spectral-sarif
+
       # Execute Spectral CLI
       - name: Run Spectral Linting
-        run: npx spectral lint SampleOpenApi.yaml -r SpectralRules.yaml -f json -o out.json
+        run: spectral lint SampleOpenApi.yaml -r SpectralRules.yaml -f json -o out.json
 
       # Execute sarif-spectral CLI and output to SARIF file
       - name: Run sarif-spectral
-        run: npx spectral-sarif -o reports/out.sarif out.json -r .
+        run: spectral-sarif -o reports/out.sarif out.json -r .
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
