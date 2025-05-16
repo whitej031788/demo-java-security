@@ -14,7 +14,7 @@
     <maven.compiler.target>17</maven.compiler.target>
     <sonar.projectName>Java Web App</sonar.projectName>
     <sonar.encoding>UTF-8</sonar.encoding>
-    <sonar.sources>src/main/java,Dockerfile</sonar.sources>
+    <sonar.sources>src/main/java,Dockerfile,SampleOpenApi.yaml</sonar.sources>
     <sonar.projectKey>whitej031788_demo-java-security_23c25f38-ad3f-457c-8faf-5dcadd7de422</sonar.projectKey>
     <sonar.externalIssuesReportPaths>reports/image-scan.json</sonar.externalIssuesReportPaths>
     <sonar.sarifReportPaths>reports/open-api.sarif</sonar.sarifReportPaths>
