@@ -24,11 +24,11 @@ jobs:
 
       # Install Spectral CLI globally
       - name: Install Spectral CLI
-        run: npm install -g spectral
+        run: npm install spectral
 
       # Install sarif-spectral CLI globally
       - name: Install sarif-spectral CLI
-        run: npm install -g spectral-sarif
+        run: npm install spectral-sarif
 
       - name: Add npm global bin to PATH and Source Profile
         run: |
