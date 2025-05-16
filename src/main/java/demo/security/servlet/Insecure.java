@@ -1,6 +1,7 @@
 package demo.security.servlet;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -10,6 +11,7 @@ import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Random;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +33,69 @@ public class Insecure {
     Files.exists(Paths.get("/tmp/", obj));
   }
 
+  public static String processLargeData(String data) {
+    // Simulate a long and complex method
+    StringBuilder resultBuilder = new StringBuilder();
+    if (data != null) {
+      String[] parts = data.split(",");
+      for (String part : parts) {
+        if (part.startsWith("A")) {
+          String processedA = part.substring(1).trim().toUpperCase();
+          resultBuilder.append("Processed A: ").append(processedA).append("\n");
+          if (processedA.length() > 5) {
+            resultBuilder.append("  - Lengthy A\n");
+            if (processedA.contains("X")) {
+              resultBuilder.append("    - Contains X\n");
+            }
+          }
+        } else if (part.startsWith("B")) {
+          String processedB = part.substring(1).trim().toLowerCase();
+          resultBuilder.append("Processed B: ").append(processedB).append("\n");
+          // More and more logic...
+          if (processedB.length() > 3) {
+            resultBuilder.append("  - Longer B\n");
+            if (processedB.equals("test")) {
+              resultBuilder.append("    - Is 'test'\n");
+            }
+          }
+        } else {
+          resultBuilder.append("Ignored: ").append(part).append("\n");
+        }
+
+        // Even more processing steps...
+        if (part.length() % 2 == 0) {
+          resultBuilder.append("  - Even length\n");
+        } else {
+          resultBuilder.append("  - Odd length\n");
+        }
+      }
+    } else {
+      resultBuilder.append("No data provided.\n");
+    }
+    return resultBuilder.toString();
+  }
+
+  // 2. Insecure Random Number Generation (Security)
+  public static int generatePredictableId() {
+    Random random = new Random(1); // Using a fixed seed
+    return random.nextInt(1000);
+  }
+
+  // 3. Unclosed Resource (Potential Resource Leak - Maintainability/Reliability)
+  public static void readFileWithoutClosing() {
+    FileInputStream fis = null;
+    try {
+      File file = new File("example.txt");
+      fis = new FileInputStream(file);
+      // Read some data, but the stream might not be closed properly in case of exceptions
+      fis.read();
+      System.out.println("File read operation started...");
+    } catch (IOException e) {
+      System.err.println("Error reading file: " + e.getMessage());
+    }
+    // 'fis' might not be closed here if an exception occurs
+  }
+
   public String taintedSQL(HttpServletRequest request, Connection connection) throws Exception {
     String user = request.getParameter("user");
     String query = "SELECT userid FROM users WHERE username = '" + user  + "'";
@@ -45,7 +110,6 @@ public class Insecure {
 	  ResultSet rs = statement.executeQuery("select userid from users WHERE username=" + user);
 	  return rs.getString(0);
 	}
-
   // --------------------------------------------------------------------------
   // Custom sources, sanitizer and sinks example
   // See file s3649JavaSqlInjectionConfig.json in root directory 
