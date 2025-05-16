@@ -16,6 +16,27 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v4 # Use a recent version
+        with:
+          node-version: 'lts/*' # Use the latest LTS version of Node.js
+
+      # Install Spectral CLI globally
+      - name: Install Spectral CLI
+        run: npm install -g spectral
+
+      # Install sarif-spectral CLI globally
+      - name: Install sarif-spectral CLI
+        run: npm install -g spectral-sarif
+      # Execute Spectral CLI
+      - name: Run Spectral Linting
+        run: spectral lint SampleOpenApi.yaml -r SpectralRules.yaml -f json -o out.json
+
+      # Execute sarif-spectral CLI and output to SARIF file
+      - name: Run sarif-spectral
+        run: spectral-sarif -o reports/out.sarif out.json -r .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
