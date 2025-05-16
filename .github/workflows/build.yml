@@ -24,21 +24,22 @@ jobs:
 
       # Install Spectral CLI globally
       - name: Install Spectral CLI
-        run: npm install spectral
+        run: npm install -g spectral --prefix "$HOME/.npm-global"
 
       # Install sarif-spectral CLI globally
       - name: Install sarif-spectral CLI
-        run: npm install spectral-sarif
+        run: npm install -g spectral-sarif --prefix "$HOME/.npm-global"
 
-      - name: Add npm global bin to PATH and Source Profile
-        run: |
-          echo "$HOME/.npm-global/bin" >> $GITHUB_PATH
-          source ~/.profile # Or try ~/.bashrc if ~/.profile doesn't exist
+      - name: Add npm global bin to PATH
+        run: echo "$HOME/.npm-global/bin" >> $GITHUB_PATH
 
-      # Debug PATH
-      - name: Debug PATH
-        run: |
-          echo "Current PATH: $PATH"
+      # Verify Spectral installation location
+      - name: Verify Spectral Location
+        run: which spectral
+
+      # Verify sarif-spectral installation location
+      - name: Verify sarif-spectral Location
+        run: which spectral-sarif
       # Execute Spectral CLI
       - name: Run Spectral Linting
         run: spectral lint SampleOpenApi.yaml -r SpectralRules.yaml -f json -o out.json
