@@ -37,7 +37,8 @@ jobs:
 
       # Debug PATH
       - name: Debug PATH
-        run: echo "Current PATH: $PATH"
+        run: |
+          echo "Current PATH: $PATH"
       # Execute Spectral CLI
       - name: Run Spectral Linting
         run: spectral lint SampleOpenApi.yaml -r SpectralRules.yaml -f json -o out.json
