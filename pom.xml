@@ -17,7 +17,7 @@
     <sonar.sources>src/main/java,Dockerfile</sonar.sources>
     <sonar.projectKey>whitej031788_demo-java-security_23c25f38-ad3f-457c-8faf-5dcadd7de422</sonar.projectKey>
     <sonar.externalIssuesReportPaths>reports/image-scan.json</sonar.externalIssuesReportPaths>
-    <sonar.sarifReportPaths>=reports/open-api.sarif</sonar.sarifReportPaths>
+    <sonar.sarifReportPaths>reports/open-api.sarif</sonar.sarifReportPaths>
   </properties>
   <dependencies>
     <dependency>
