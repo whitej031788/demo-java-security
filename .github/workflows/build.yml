@@ -29,6 +29,9 @@ jobs:
       # Install sarif-spectral CLI globally
       - name: Install sarif-spectral CLI
         run: npm install -g spectral-sarif
+        
+      - name: Add npm global bin to PATH
+        run: echo "$HOME/.npm-global/bin" >> $GITHUB_PATH
       # Execute Spectral CLI
       - name: Run Spectral Linting
         run: spectral lint SampleOpenApi.yaml -r SpectralRules.yaml -f json -o out.json
