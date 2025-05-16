@@ -31,13 +31,14 @@ jobs:
         run: npm install -g spectral-sarif
 
             # Find the npm global bin directory
-      - name: Get npm global bin directory
-        id: npm-global-bin
-        run: echo "path=$(npm config get prefix)/bin" >> $GITHUB_OUTPUT
+      # Get npm global prefix
+      - name: Get npm global prefix
+        id: get-npm-prefix
+        run: echo "PREFIX=$(npm config get prefix)" >> $GITHUB_OUTPUT
 
       # Add npm global bin to PATH
       - name: Add npm global bin to PATH
-        run: echo "${{ steps.npm-global-bin.outputs.path }}" >> $GITHUB_PATH
+        run: echo "${{ steps.get-npm-prefix.outputs.PREFIX }}/bin" >> $GITHUB_PATH
 
       # Verify Spectral installation location
       - name: Verify Spectral Location
