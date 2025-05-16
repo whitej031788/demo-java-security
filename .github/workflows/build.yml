@@ -30,7 +30,10 @@ jobs:
       - name: Install sarif-spectral CLI
         run: npm install -g spectral-sarif
 
-              # Get npm global prefix
+      - name: List Global npm Packages
+        run: npm list -g --depth=0
+
+      # Get npm global prefix
       - name: Get npm global prefix
         id: get-npm-prefix
         run: echo "PREFIX=$(npm config get prefix)" >> $GITHUB_OUTPUT
@@ -38,6 +41,9 @@ jobs:
       # Add npm global bin to PATH
       - name: Add npm global bin to PATH
         run: echo "${{ steps.get-npm-prefix.outputs.PREFIX }}/bin" >> $GITHUB_PATH
+
+      - name: Echo Full PATH
+        run: echo "$PATH"
 
       # Verify Spectral installation location
       - name: Verify Spectral Location
