@@ -30,6 +30,7 @@ public class Insecure {
     tempDir = File.createTempFile("", ".");
     tempDir.delete();
     tempDir.mkdir();
+    String dontUse = "fontUset";
     Files.exists(Paths.get("/tmp/", obj));
   }
 
