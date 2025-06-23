@@ -135,18 +135,4 @@ public class Insecure {
     processParam(myInput);
     storeData(myInput);                   // store data after sanitizing --> No injection vulnerability 
   }
-
-  public static void readFileWithoutClosing() {
-    FileInputStream fis = null;
-    try {
-      File file = new File("example.txt");
-      fis = new FileInputStream(file);
-      // Read some data, but the stream might not be closed properly in case of exceptions
-      fis.read();
-      System.out.println("File read operation started...");
-    } catch (IOException e) {
-      System.err.println("Error reading file: " + e.getMessage());
-    }
-    // 'fis' might not be closed here if an exception occurs
-  }
 }
