@@ -34,4 +34,19 @@ public class DBUtils {
         }
         return items;
     }
+
+    public String getCustomerContactInfo(String customerName) {
+        String query = "SELECT email, phone_number FROM customers WHERE customer_name = '" + customerName + "'";
+        try (Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(query)) {
+            if (resultSet.next()) {
+                String email = resultSet.getString("email");
+                String phoneNumber = resultSet.getString("phone_number");
+                return email + " - " + phoneNumber;
+            }
+        } catch (Exception e) {
+            e.printStackTrace(); // Log the exception for debugging
+        }
+        return null; // Return null if no contact info is found or an error occurs
+    }
 }
