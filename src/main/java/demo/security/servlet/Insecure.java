@@ -82,21 +82,6 @@ public class Insecure {
     return random.nextInt(1000);
   }
 
-  // 3. Unclosed Resource (Potential Resource Leak - Maintainability/Reliability)
-  public static void readFileWithoutClosing() {
-    FileInputStream fis = null;
-    try {
-      File file = new File("example.txt");
-      fis = new FileInputStream(file);
-      // Read some data, but the stream might not be closed properly in case of exceptions
-      fis.read();
-      System.out.println("File read operation started...");
-    } catch (IOException e) {
-      System.err.println("Error reading file: " + e.getMessage());
-    }
-    // 'fis' might not be closed here if an exception occurs
-  }
-
   public String taintedSQL(HttpServletRequest request, Connection connection) throws Exception {
     String user = request.getParameter("user");
     String query = "SELECT userid FROM users WHERE username = '" + user  + "'";
