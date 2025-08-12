@@ -17,6 +17,7 @@ public class DBUtils {
         String query = "SELECT userid FROM users WHERE username = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, user);
+        ResultSet resultSet = statement.executeQuery(query);
         List<String> users = new ArrayList<String>();
         while (resultSet.next()){
             users.add(resultSet.getString(0));
@@ -28,6 +29,7 @@ public class DBUtils {
         String query = "SELECT item_id FROM items WHERE item_id = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, itemId);
+        ResultSet resultSet = statement.executeQuery(query);
         List<String> items = new ArrayList<String>();
         while (resultSet.next()){
             items.add(resultSet.getString(0));
