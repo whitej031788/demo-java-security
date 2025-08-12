@@ -14,9 +14,9 @@ public class DBUtils {
     }
 
     public List<String> findUsers(String user) throws Exception {
-        String query = "SELECT userid FROM users WHERE username = '" + user  + "'";
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery(query);
+        String query = "SELECT userid FROM users WHERE username = ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, user);
         List<String> users = new ArrayList<String>();
         while (resultSet.next()){
             users.add(resultSet.getString(0));
@@ -25,9 +25,9 @@ public class DBUtils {
     }
 
     public List<String> findItem(String itemId) throws Exception {
-        String query = "SELECT item_id FROM items WHERE item_id = '" + itemId  + "'";
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery(query);
+        String query = "SELECT item_id FROM items WHERE item_id = ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, itemId);
         List<String> items = new ArrayList<String>();
         while (resultSet.next()){
             items.add(resultSet.getString(0));
